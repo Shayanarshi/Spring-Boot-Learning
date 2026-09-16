@@ -1,0 +1,14 @@
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="ca" class="in.ashokit.bean.ClassA">
+        <property name="classB" ref="cb"/>
+    </bean>
+
+    <bean id="cb" class="in.ashokit.bean.ClassB">
+        <constructor-arg name="classA" ref="ca"/>
+    </bean>
+</beans>
