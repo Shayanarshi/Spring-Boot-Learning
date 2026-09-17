@@ -23,4 +23,4 @@ A collection of Spring Framework and Spring Boot learning projects.
 | sb-function-demo | Spring Boot Functions |
 | sb-jdbc-example1 | Spring JDBC |
 | sb-jdbc-rowmapper | JDBC RowMapper |
-| sb-jpas-crud-demo | Spring Data JPA CRUD |
+| sb-jpa-crud-demo | Spring Data JPA CRUD |
