@@ -5,7 +5,7 @@ A collection of Spring Framework and Spring Boot learning projects.
 ## 📚 Projects
 
 | Project | Topic |
-|---|---|
+|--------|-------|
 | AnnotationDemo | Spring Annotations |
 | BeanLifeCycleDemo | Bean Lifecycle |
 | CircularDependencyDemo | Circular Dependency |
@@ -24,3 +24,7 @@ A collection of Spring Framework and Spring Boot learning projects.
 | sb-jdbc-example1 | Spring JDBC |
 | sb-jdbc-rowmapper | JDBC RowMapper |
 | sb-jpa-crud-demo | Spring Data JPA CRUD |
+| sb-jpa-id-generator | JPA ID Generation |
+| sb-jpa-query | Spring Data JPA Queries |
+| sb-jpa-query-2 | Spring Data JPA Queries |
+| sb-jpa-query-3 | Spring Data JPA Queries |
