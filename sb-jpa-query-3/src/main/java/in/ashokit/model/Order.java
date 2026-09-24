@@ -12,7 +12,14 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
+@NamedQuery(name = "Order.fetchByAmountAndStatus",
+        query = "select o from Order o where o.status =:status and o.amount>:amount")
 
+
+@NamedNativeQuery(name = "Order.fetchAllOrders",
+                    query = "SELECT * FROM orders",
+                    resultClass = Order.class
+                    )
 public class Order {
     @Id
     private  Long id;

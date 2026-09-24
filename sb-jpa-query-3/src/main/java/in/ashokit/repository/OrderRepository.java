@@ -14,29 +14,10 @@ import java.util.List;
 @Repository
 public interface OrderRepository extends JpaRepository<Order,Long> {
 
+List<Order> fetchByAmountAndStatus(@Param("status") OrderStatus stat,
+                                   @Param("amount") Double amount);
 
-    //select the orders between two dates
-
-    @Query(value = "SELECT o FROM Order o WHERE o.orderDate BETWEEN ?1 AND ?2",nativeQuery = false)
-    List<Order> fetchOrdersBetweenDates(LocalDate startDate,LocalDate endDate);
-
-
-    // select the orders with status1 or status2 delivered or cancelled
-
-
-  /*@Query(value = "SELECT * FROM ORDERS WHERE STATUS = ? OR STATUS=? ",nativeQuery = true)
-    List<Order> getOrdersWithStatus(OrderStatus status1,OrderStatus status2);*/
-
-    @Query(value = "SELECT * FROM ORDERS WHERE STATUS = ? OR STATUS=? ",nativeQuery = true)
-    List<Order> getOrdersWithStatus(String status1,String status2);
-
-    @Query(value = "SELECT * FROM ORDERS WHERE Amount = (SELECT MAX(AMOUNT) FROM ORDERS)" ,nativeQuery = true)
-    List<Order> fetchHighestAmountOrder();
-
-    @Query(value="select o from Order o where o.amount > :amount and o.status = :sts")
-    List<Order>  fetchOrdersByStatus(@Param("amount")Double amount,
-                                                @Param("sts") OrderStatus status);
-
+List<Order> fetchAllOrders();
 
 
 
